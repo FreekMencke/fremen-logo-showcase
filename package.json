@@ -1,0 +1,15 @@
+{
+  "name": "fremen-logo-showcase",
+  "version": "1.0.0",
+  "description": "Logo Showcase for Mencke Verzekeringen",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "fremen",
+  "license": "MIT",
+  "devDependencies": {
+    "@wordpress/scripts": "9.0.0"
+  }
+}
