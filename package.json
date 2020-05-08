@@ -2,7 +2,12 @@
   "name": "fremen-logo-showcase",
   "version": "1.0.0",
   "description": "Logo Showcase for Mencke Verzekeringen",
-  "main": "build/index.js",
+  "author": "Freek Mencke",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreekMencke/fremen-logo-showcase"
+  },
   "scripts": {
     "start:gutenberg": "wp-scripts start",
     "start:slider": "webpack --mode development --entry ./src/slider.js --output ./build/slider.js --watch",
@@ -13,8 +18,6 @@
     "build:slider": "webpack --mode production --entry ./src/slider.js --output ./build/slider.js",
     "postbuild:slider": "cp ./node_modules/tiny-slider/dist/tiny-slider.css ./build/tiny-slider.css"
   },
-  "author": "Freek Mencke",
-  "license": "MIT",
   "dependencies": {
     "tiny-slider": "^2.9.2"
   },
