@@ -41,8 +41,8 @@ registerBlockType('fremen/logo-showcase', {
       title: 'Logo Showcase',
       instructions: `
             Choose the logos you want to display in the Logo Showcase.
-            To link the logo to a website, put it in the description prefixed with "//".
-            For example "//www.google.com"`,
+            To link the logo to a website, put the link in the description prefixed with "//".
+            For example "//www.google.com".`,
     };
 
     return (
@@ -72,11 +72,29 @@ registerBlockType('fremen/logo-showcase', {
   },
   save: ({ attributes }) => {
     return (
-      <div>
-        {attributes.images.map((img) => {
-          const imgElement = <img class={img.class} src={img.src} />;
-          return img.href && img.href.startsWith('//') ? <a href={img.href}>{imgElement}</a> : imgElement;
-        })}
+      <div class="fls-wrapper">
+        <div class="fls-controls">
+          <div class="fls-controls-prev"></div>
+          <div class="fls-controls-next"></div>
+        </div>
+        <div class="fls-container">
+          {attributes.images.map((img) => {
+            const imgElement = <img class={img.class} src={img.src} />;
+            return (
+              <div>
+                <div class="fls-image-wrapper">
+                  {img.href && img.href.startsWith('//') ? (
+                    <a href={img.href} target="_blank">
+                      {imgElement}
+                    </a>
+                  ) : (
+                    imgElement
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   },

@@ -1,0 +1,65 @@
+.fls-wrapper {
+  position: relative;
+}
+.fls-wrapper .tns-outer {
+  margin: 0 40px !important;
+}
+.fls-container .tns-item {
+  height: 150px;
+}
+.fls-container .fls-image-wrapper > a,
+.fls-container .fls-image-wrapper > img {
+  display: block;
+  text-align: center;
+}
+.fls-container .fls-image-wrapper img {
+  max-height: 100%;
+  max-width: 200px;
+  filter: grayscale(1);
+  transition: filter 300ms;
+}
+.fls-container .fls-image-wrapper img:hover {
+  filter: grayscale(0);
+}
+.fls-container .fls-image-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.fls-controls {
+  position: absolute;
+  width: 100%;
+  top: calc(75px - 16px);
+  line-height: 32px;
+}
+.fls-controls,
+.fls-controls .fls-controls-prev,
+.fls-controls .fls-controls-next {
+  outline: 0;
+}
+.fls-controls .fls-controls-prev,
+.fls-controls .fls-controls-next {
+  display: block;
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 32px;
+}
+.fls-controls .fls-controls-prev:hover,
+.fls-controls .fls-controls-next:hover {
+  color: #f99d1c;
+}
+.fls-controls .fls-controls-prev {
+  float: left;
+}
+.fls-controls .fls-controls-prev::before {
+  content: '\f053';
+}
+.fls-controls .fls-controls-next {
+  float: right;
+}
+.fls-controls .fls-controls-next::before {
+  content: '\f054';
+}
