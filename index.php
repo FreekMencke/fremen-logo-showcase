@@ -23,21 +23,21 @@ function fremen_logo_showcase_register_block() {
     );
  
     register_block_type( 'fremen/logo-showcase', array(
-        'editor_script' => 'fremen/logo-showcase',
+        'editor_script' => 'fremen/logo-showcase'
     ) );
 
     wp_enqueue_script(
         'slider-script', 
-        plugins_url('build/slider.js', __FILE__),
+        plugins_url('build/slider.js', __FILE__)
     );
 
     wp_enqueue_style(
         'tiny-slider-style', 
-        plugins_url('build/tiny-slider.css', __FILE__),
+        plugins_url('build/tiny-slider.css', __FILE__)
     );
     wp_enqueue_style(
         'slider-style-custom', 
-        plugins_url('build/custom.css', __FILE__),
+        plugins_url('build/custom.css', __FILE__)
     );
  
 }
