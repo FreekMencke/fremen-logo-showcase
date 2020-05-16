@@ -13,7 +13,8 @@
   text-align: center;
 }
 .fls-container .fls-image-wrapper img {
-  max-height: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  max-height: 100px;
   max-width: 200px;
   filter: grayscale(1);
   transition: filter 300ms;
